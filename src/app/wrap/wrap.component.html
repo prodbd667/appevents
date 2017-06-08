@@ -1,0 +1,27 @@
+<div>
+  <ul class="nav">
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+      <a routerLink="" md-raised-button>Главная</a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="/calendar" md-raised-button>Календарь</a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="/about" md-raised-button>О сайте</a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+</div>
+
+<!--<md-sidenav-container class="example-container">
+  <md-sidenav #sidenav class="example-sidenav">
+    Jolly good!
+  </md-sidenav>
+
+  <div class="example-sidenav-content">
+    <button md-button (click)="sidenav.open()">
+      Open sidenav
+    </button>
+  </div>
+
+</md-sidenav-container>-->

@@ -1,0 +1,30 @@
+<div class="day-week--header">
+  <template ngFor let-day [ngForOf]="dayWeekRus">
+    <div class="day-week__name">{{ day }}</div>
+  </template>
+</div>
+<div *ngFor="let item of arrMonths.arrFormat" class="day-week--block">
+  <div *ngFor="let i of item; let ind = index;">
+    <div>
+      <div class="day" [class.background--zero]="i === 0" (click)="onSelectDay(i)">
+        <template [ngIf]="getCountDay(i)">
+          <div class="dayEvent">
+            <div class="number--block" [class.weekend]="weekendDayStyle(ind)">
+              <div [class.selected]="i === selectedDay"></div>
+              <span class="number">{{i.id}}</span>
+              <div class="active"></div>
+            </div>
+          </div>
+        </template>
+        <template [ngIf]="!getCountDay(i)">
+          <div>
+            <div class="number day--no-event" [class.weekend]="weekendDayStyle(ind)">{{i.id}}
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-dinamic [componentData]="componentData"></app-dinamic>
