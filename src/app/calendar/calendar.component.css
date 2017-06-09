@@ -241,83 +241,89 @@
 
 /*clndr*/
 .day-week--header {
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid #ccc;
-      margin-bottom: 20px;
-    }
- .day-week__name {
-        width: 50px;
-        height: 30px;
-        text-align: center;
-        text-transform: uppercase;
-      }
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
 
-    .day-week--block {
-      display: flex;
-    }
+.day-week__name {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.day-week--block {
+  display: flex;
+}
 
 .dayEvent:hover {
-        cursor: pointer;
-      }
-
-      .day {
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        padding: 0 10px 10px 0;
-        position: relative;
-box-sizing: border-box;
-        border: 1px solid #ccc;
-
-      }
-.day:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-    .number--block {
-          z-index: 10;
-          position: relative;
 
-          margin: 0 0 4px 0px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+.day {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 10px 10px 0;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
 
-        }
-        .number {
-          z-index: 10;
-          position: relative;
-          display: inline-block;
-          line-height: 1;
-        }
-        .day--no-event {
-          margin: 0 0 4px 0;
-        }
-        .number.weekend {
-        }
+}
 
-        .selected {
-          background-color: #dddddd;
-          width: 28px;
-          height: 28px;
-          border-radius: 50%;
-          display: inline-block;
-          position: absolute;
-          z-index: 1;
-        }
+.day--month:hover {
+  cursor: pointer;
+}
 
-        .active {
-          display: inline-block;
-          border-radius: 50%;
-          height: 6px;
-          width: 6px;
-          background: #f34254;
-          position: absolute;
-          bottom: -14px;
-        }
+.number--block {
+  z-index: 10;
+  position: relative;
 
-        .background--zero {
-      background: transparent;
-    }
+  margin: 0 0 4px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.number {
+  z-index: 10;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+
+.day--no-event {
+  margin: 0 0 4px 0;
+}
+
+.number.weekend {
+}
+
+.selected {
+  background-color: #dddddd;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+}
+
+.active {
+  display: inline-block;
+  border-radius: 50%;
+  height: 6px;
+  width: 6px;
+  background: #f34254;
+  position: absolute;
+  bottom: -14px;
+}
+
+.background--zero {
+  background: transparent;
+}

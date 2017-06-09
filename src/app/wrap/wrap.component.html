@@ -1,27 +1,39 @@
-<div>
-  <ul class="nav">
-    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-      <a routerLink="" md-raised-button>Главная</a>
-    </li>
-    <li routerLinkActive="active">
-      <a routerLink="/calendar" md-raised-button>Календарь</a>
-    </li>
-    <li routerLinkActive="active">
-      <a routerLink="/about" md-raised-button>О сайте</a>
-    </li>
-  </ul>
-  <router-outlet></router-outlet>
-</div>
+<md-sidenav-container class="example-container">
+  <md-sidenav #sidenav class="example-sidenav" mode="side" opened="true">
+    <md-list>
+      <md-list-item>
+        <div routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+          <a routerLink="" md-raised-button>Главная</a>
+        </div>
+      </md-list-item>
+      <md-list-item>
+        <div routerLinkActive="active">
+          <a routerLink="/calendar" md-raised-button>Календарь</a>
+        </div>
+      </md-list-item>
+      <md-list-item>
+        <div routerLinkActive="active">
+          <a routerLink="/socket" md-raised-button>socket</a>
+        </div>
+      </md-list-item>
+      <md-list-item>
+        <div routerLinkActive="active">
+          <a routerLink="/about" md-raised-button>О сайте</a>
+        </div>
+      </md-list-item>
+    </md-list>
 
-<!--<md-sidenav-container class="example-container">
-  <md-sidenav #sidenav class="example-sidenav">
-    Jolly good!
   </md-sidenav>
 
   <div class="example-sidenav-content">
-    <button md-button (click)="sidenav.open()">
-      Open sidenav
-    </button>
+    <div>
+      <button md-button (click)="sidenav.toggle()">
+        Open sidenav
+      </button>
+    </div>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
   </div>
 
-</md-sidenav-container>-->
+</md-sidenav-container>
